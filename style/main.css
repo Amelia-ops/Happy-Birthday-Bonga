@@ -231,6 +231,12 @@ body {
     left: 40%;
   }
 }
+@media (max-width: 600px) {
+  .home-button {
+    width: 80%;
+    font-size: 1rem;
+    padding: 10px;
+  }
 
 @media screen and (max-height: 800px) {
   .six .hat {
@@ -292,13 +298,14 @@ body {
 }
 
 .home-button {
+  margin-top: 30px
   display: inline-block;
-  padding: 14px 28px;
+  padding: 12px 24px;
   background: linear-gradient(135deg, #1f1f1f, #333, #007BFF); /* black, dark grey, and blue */
   color: white;
   text-decoration: none;
   border-radius: 8px;
-  font-size: 20px;
+  font-size: 1.2rem;
   font-weight: bold;
   text-transform: uppercase;
   font-family: 'Poppins', sans-serif;
