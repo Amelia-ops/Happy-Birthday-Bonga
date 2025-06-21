@@ -9,15 +9,16 @@ window.addEventListener('load', () => {
         confirmButtonText: 'Yes',
         cancelButtonText: 'No',
     }).then((result) => {
-        if (result.isConfirmed) {
-            document.querySelector('.song').play();
-            animationTimeline();
-        } else {
-            animationTimeline();
+      if (result.isConfirmed) {
+            const audio = document.querySelector('.song');
+            if (audio) {
+                audio.play().catch((err) => console.log("Audio play failed:", err));
+            }
         }
+        // ✅ Run animation regardless of choice
+        animationTimeline();
     });
 });
-
 
 // animation timeline
 const animationTimeline = () => {
