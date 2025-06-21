@@ -11,8 +11,8 @@ body {
   visibility: hidden;
 }
 
-.container {
-  height: 100vh;
+.container:not(.four) {
+  height: 113vh;
   margin: 0 auto;
   overflow: hidden;
   position: relative;
@@ -21,7 +21,7 @@ body {
   width: 100vw;
 }
 
-.container > div {
+.container > div:not(.four) {
   left: 0;
   position: absolute;
   right: 0;
@@ -41,14 +41,26 @@ body {
   font-size: 3rem;
 }
 
+.four {
+  overflow: scroll !important;
+  height: 100%;
+}
+
 .four .text-box {
   border: 3px solid #aaa;
   border-radius: 5px;
   margin: 0 auto;
   padding: 10px;
   position: relative;
-  width: 600px;
-  top: -20px;
+  width: 300px;
+  top: 5px;
+  height: 643px;
+  overflow-y: auto;
+}
+
+.hbd-chatbox {
+  /* white-space: pre-wrap; */
+  height: 900px;
 }
 
 .text-box p {
@@ -205,9 +217,15 @@ body {
 }
 
 .wish-hbd {
-  font-size: 3em;
+  font-size: 2em;
   margin: 0;
   text-transform: uppercase;
+}
+
+.wish-hbd span {
+  white-space: pre;
+  display: inline-block;
+  min-width: 0.2em; /* or adjust as needed */
 }
 
 .wish h5 {
@@ -285,7 +303,7 @@ body {
   }
 
   .wish-hbd {
-    font-size: 2.2em;
+    font-size: 2em;
   }
 
   .wish h5 {
@@ -299,7 +317,7 @@ body {
 }
 
 .home-button {
-  margin-top: 30px
+  margin-top: 30px;
   display: inline-block;
   padding: 12px 24px;
   background: linear-gradient(135deg, #1f1f1f, #333, #007BFF); /* black, dark grey, and blue */
@@ -328,4 +346,5 @@ body {
   color: #fff;
   box-shadow: 0 0 20px rgba(0, 123, 255, 0.8);
   text-shadow: 0 0 12px #fff, 0 0 24px #007BFF;
+}
 }
